@@ -119,31 +119,31 @@ void EthernetComponent::setup() {
   esp_eth_mac_t *mac;
   esp_eth_phy_t *phy;
   switch (this->type_) {
-    case ETHERNET_TYPE_LAN8720: {
-      mac = esp_eth_mac_new_esp32(&mac_config);
-      phy = esp_eth_phy_new_lan87xx(&phy_config);
-      break;
-    }
-    case ETHERNET_TYPE_RTL8201: {
-      mac = esp_eth_mac_new_esp32(&mac_config);
-      phy = esp_eth_phy_new_rtl8201(&phy_config);
-      break;
-    }
-    case ETHERNET_TYPE_DP83848: {
-      mac = esp_eth_mac_new_esp32(&mac_config);
-      phy = esp_eth_phy_new_dp83848(&phy_config);
-      break;
-    }
-    case ETHERNET_TYPE_IP101: {
-      mac = esp_eth_mac_new_esp32(&mac_config);
-      phy = esp_eth_phy_new_ip101(&phy_config);
-      break;
-    }
-    case ETHERNET_TYPE_JL1101: {
-      mac = esp_eth_mac_new_esp32(&mac_config);
-      phy = esp_eth_phy_new_jl1101(&phy_config);
-      break;
-    }
+//     case ETHERNET_TYPE_LAN8720: {
+//       mac = esp_eth_mac_new_esp32(&mac_config);
+//       phy = esp_eth_phy_new_lan87xx(&phy_config);
+//       break;
+//     }
+//     case ETHERNET_TYPE_RTL8201: {
+//       mac = esp_eth_mac_new_esp32(&mac_config);
+//       phy = esp_eth_phy_new_rtl8201(&phy_config);
+//       break;
+//     }
+//     case ETHERNET_TYPE_DP83848: {
+//       mac = esp_eth_mac_new_esp32(&mac_config);
+//       phy = esp_eth_phy_new_dp83848(&phy_config);
+//       break;
+//     }
+//     case ETHERNET_TYPE_IP101: {
+//       mac = esp_eth_mac_new_esp32(&mac_config);
+//       phy = esp_eth_phy_new_ip101(&phy_config);
+//       break;
+//     }
+//     case ETHERNET_TYPE_JL1101: {
+//       mac = esp_eth_mac_new_esp32(&mac_config);
+//       phy = esp_eth_phy_new_jl1101(&phy_config);
+//       break;
+//     }
 #ifdef USE_ETHERNET_SPI  // Configure SPI interface and Ethernet driver for specific SPI module
     case ETHERNET_TYPE_W5500: {
       mac = esp_eth_mac_new_w5500(&w5500_config, &mac_config);
